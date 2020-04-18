@@ -276,19 +276,24 @@ button {
       </h2>
     <form name="Form">
   <input name="email" type="email" placeholder="Email" required>
-  <button type="submit">Send</button>
+  <button type="submit" id="submit-form">Send</button>
 </form>
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbzbsToqgX__7jQrEHpskghtpH0VfTE8TEGFLON04iGRfmH596Q/exec'
-  const form = document.forms['Form']
+  var $form = $('form#test-form'),
+    url = 'https://script.google.com/macros/s/AKfycbzbsToqgX__7jQrEHpskghtpH0VfTE8TEGFLON04iGRfmH596Q/exec'
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+$('#submit-form').on('click', function(e) {
+  e.preventDefault();
+  var jqxhr = $.ajax({
+    url: url,
+    method: "GET",
+    dataType: "json",
+    data: $form.serializeObject()
+  }).success(
+    // do something
+  );
+})
 </script>
 
 
