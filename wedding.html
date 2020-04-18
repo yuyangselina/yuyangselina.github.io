@@ -274,26 +274,21 @@ button {
      <h2 align="center" class="w3-container w3-lobster"  style="font-size: 300%; color:#424242;">
       RSVP
       </h2>
-    <form name="Form">
+    <form name="submit-to-google-sheet">
   <input name="email" type="email" placeholder="Email" required>
-  <button type="submit" id="submit-form">Send</button>
+  <button type="submit">Send</button>
 </form>
 
 <script>
-  var $form = $('form#test-form'),
-    url = 'https://script.google.com/macros/s/AKfycbzbsToqgX__7jQrEHpskghtpH0VfTE8TEGFLON04iGRfmH596Q/exec'
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwxw6dahbCBsB0z7mRS5N8P7xmRIyItreYiopZyrhSKpeVRmguD/exec'
+  const form = document.forms['submit-to-google-sheet']
 
-$('#submit-form').on('click', function(e) {
-  e.preventDefault();
-  var jqxhr = $.ajax({
-    url: url,
-    method: "GET",
-    dataType: "json",
-    data: $form.serializeObject()
-  }).success(
-    // do something
-  );
-})
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
 </script>
 
 
