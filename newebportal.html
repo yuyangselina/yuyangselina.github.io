@@ -1,0 +1,183 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head> 
+      <title> Yuyang and Selina Wedding</title>
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <style>
+  
+  .bg-img {
+    /* The image used */
+    background-image: url("https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Banner.png?raw=true"); 
+	background-size: auto;
+    height: 400px;
+
+    /* Center and scale the image nicely */
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+	/* Navigation Bar */
+	.nav{
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:320px;
+   font-family: 'Sofia';
+	font-size: 22px;
+    font-style: bold;
+    text-align:center;
+}
+	.nav li{
+    display:inline;
+}
+	.nav a{
+    display:inline-block;
+    padding:10px;
+}
+    
+    
+    
+    /* Section background */
+    .storybckgrd {
+    background-color: #FDEDEC;
+    opacity: 0.8
+    }
+    
+     /* Story */
+      .story {
+      padding: 30px;
+      text-align: center;
+      font-size: 35px;
+      color: black;
+    }
+    
+    /* Ceremony */
+     .ceremony {
+    float: left;
+    padding: 20px;
+    font-size: 35px;
+    width: 100%;
+  }
+    
+    /* Directions */
+     .direction {
+    float: left;
+    padding: 20px;
+    font-size: 35px;
+    width: 100%;
+  }
+    
+    /* RSVP */
+    .rsvp {
+    float: left;
+    padding: 20px;
+    font-size: 35px;
+    width: 100%;
+    }
+    
+    
+    /* h1 */
+    h1{
+    font-family: 'Sofia';
+    font-size: 24px;
+    text-align: center;
+    }
+    
+
+    
+    /* Cover Picture*/
+    img {
+  display: block;
+    border: 5px solid #ddd;
+    border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+	
+  
+	</style>
+  </head>
+  <body>
+
+
+  <div class="bg-img">
+  <ul class="nav">
+  <li><a href="/">Home</a></li>
+  <li><a href="#story">Story</a></li>
+  <li><a href="#ceremony">Ceremony</a></li>
+  <li><a href="#direction">Directions</a></li>
+  <li><a href="/contact/">Contact</a></li>
+</ul>
+  </div>
+    <h1>Please join us for our Wedding Celebration on 21st February 2021
+         <img src="https://raw.githubusercontent.com/yuyangselina/yuyangselina.github.io/master/Picture1.png" >
+    </h1>
+    
+   <div class="storybckgrd">
+ <div class="story">
+   <a name="story"></a>
+   <h1 align="center" style="font-size: 120%;">
+      Our Story </h1>
+    <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture2.png?raw=true" style = "width: 400px; border-radius: 50%; opacity: 0.9;" > 
+  <p style="font-size: 50%;">
+    jasgfndslnlsdhkgl
+   </p> 
+    </div>    </div>
+    
+     <div class="ceremony">
+         <a name="ceremony"></a>
+        <h1 align="center" style="font-size: 120%;">
+      Ceremony </h1>
+       <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture3.png?raw=true" style = "width: 400px; opacity: 0.9; border-radius: 50%; ">
+    </div><center style="font-family: Sofia; font-size: 120%"><br>
+      February 21, 2021 <br> 6:30pm - 10:30pm <br> Hotel Fort Canning <br> Grand Marquee Ballroom</center>
+    
+    
+    <div class="storybckgrd">
+      <div class="direction">
+        <a name="direction"></a>
+        <h1 align="center" style="font-size: 120%;">
+      Directions </h1>
+        <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture4.png?raw=true" style = "width: 400px; border-radius: 50%; opacity: 0.9;" >
+        <center style="font-family: Sofia; font-size:50%"><br>Hotel Fort Canning <br>11 Canning Walk<br> Singapore 178881 <br><br><img src="https://im.gifbt.com/map/venue/10592.png?v=1" style="width: 400px;"><br><br> <b>By MRT:</b><br>(DT20) Fort Canning Station: Take Exit B<br> (NS24/NE6/CC1) Dhoby Ghaut Station: Take Exit B<br><br>
+    <b>By Car:</b><br>There are parking slots available in Hotel Fort Canning.
+  </center>
+      </div>
+    </div>
+    
+    <div class="rsvp">
+        <a name="rsvp"></a>
+        <h1 align="center" style="font-size: 120%;">
+      RSVP </h1>
+      <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture5.png?raw=true" style = "width: 400px; border-radius: 50%; opacity: 0.9;" >
+         <form name="submit-to-google-sheet">
+  <input name="name" type="text" placeholder="Name" required>
+  <button type="submit" onclick="window.location.reload();">Send</button>
+</form>
+
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbxGLvAmCPFIdIk9S6fAB2rkwmuFSYaOJKBmz9nopiaCK0adkXw/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+
+    </rsvp>
+      </div>
+  </body>
+  </html>
+
+
+    </rsvp>
+      </div>
+  </body>
+  </html>
