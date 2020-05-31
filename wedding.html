@@ -1,298 +1,371 @@
   <!DOCTYPE html>
   <html lang="en">
   <head> 
-      <title> Yuyang and Selina</title>
+      <title> Yuyang and Selina Wedding</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
   <style>
-
-  * {
-    box-sizing: border-box; 
-      }
-
-      body {
-      font-family: Arial, Helvetica, sans-serif;
-      }	
-
-   .bg-img {
+  
+  .bg-img {
     /* The image used */
-    background-image: url("https://raw.githubusercontent.com/yuyangselina/yuyangselina.github.io/master/Picture1.png"); opacity: 0.8;
-    font-family: garamond;
-    font-size: large;
-
-    min-height: 600px;
+    background-image: url("https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Header.png?raw=true"); 
+	background-size: 80% auto;
+    height: 280px;
 
     /* Center and scale the image nicely */
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: cover;
-
-    /* Needed to position the navbar */
-    position: relative;
   }
+	/* Navigation Bar */
+	.nav{
+    border-width:1px;
+    list-style:none;
+	bottom:0;
+    margin:0;
+	width: 100%;
+    padding-top:1%;
+   font-family: 'Sofia';
+	font-size: 22px;
+    font-style: bold;
+	overflow: hidden;
+    text-align:center;
+}
+	.nav li{
+    display:inline;
+	text-align: center;
+	
 
-  /* Position the navbar container inside the image */
-  .container {
-    position: absolute;
-    margin: 2px;
-    width: 100%;
-  }
+}
+	.nav a{
+    display:inline-block;
 
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-20%, -20%);
-  } 
+	height: 70%;
+    padding-left:30px;
+	padding-right: 30px;
+	text-align: center;
+	color: #2C5C78;
+	opacity: 0.7;
+	text-style: bold;
+	text-decoration: none;
+}
+	.nav a:hover{
+	background: #F2F3F4;
+	color: #566573;
+	}
+    
+	/*SlideShow */
+	
+/* Slideshow container */
+.slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+}
 
-  .center {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, 1000%);
-    }
 
-  /* The navbar */
-  .topnav {
-    overflow: hidden;
-    background-color: #33;
-    opacity: 50;
 
-  }
 
-  /* Navbar links */
-  .topnav a {
-    float: left;
-    color: #212F3C  ;
-    text-align: center;
-    padding: 10px 14px;
-    text-decoration: none;
-    font-size: 20px;
-  }
 
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
 
-  /* Style the header */
-      .story {
-      padding: 30px;
-      text-align: center;
-      font-size: 35px;
-      color: black;
-    }
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
 
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+	
+	
+	
+	
+    
+    
+    /* Section background */
     .storybckgrd {
     background-color: #FDEDEC;
     opacity: 0.8
     }
-
-    .w3-lobster {
-    font-family: "Pacifico", serif;
-  }
-
-    .image-style {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-
-  /* Create two columns/boxes that floats next to each other */
-  .nav {
-    float: left;
-    width: 100%;
-    height: 100%; /* only for demonstration, should be removed */
-    background: #ccc;
-    padding: 20px;
-  }
-
-
-
-  .ceremony {
-    float: left;
-    padding: 20px;
-    width: 100%;
-    background-color: #e4e4e4;
-  }
-
-
-  /* Style the footer */
-  .directions {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
-
-    .rsvp {
-    background-color: #777;
-    padding: 10px;
-    text-align: center;
-    color: white;
-  }
-
-  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-  @media (max-width: 600px) {
-    nav, article {
-      width: 100%;
-      height: auto;
+    
+     /* Story */
+      .story {
+      padding: 10px;
+      text-align: center;
+      font-size: 35px;
+      color: black;
     }
+    
+    /* Ceremony */
+     .ceremony {
+    float: left;
+    padding: 10px;
+    font-size: 35px;
+    width: 100%;
   }
     
-    p {
-  text-align: center;
-  font-size: 100px;
-  margin-top: 0px;
+    /* Directions */
+     .direction {
+    float: left;
+    padding: 10px;
+    font-size: 35px;
+    width: 100%;
+  }
+    
+    /* RSVP */
+    .rsvp {
+    float: left;
+    padding: 10px;
+    font-size: 35px;
+    width: 100%;
+    }
+    
+    
+    /* h1 */
+    h1{
+    font-family: 'Sofia';
+    font-size: 120%;
+    text-align: center;
+	color: #154360;
+    }
+    
+	
+	
+    /* Cover Picture*/
+    img {
+  display: block;
+    border: 5px solid #ddd;
+    border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-  form {
-  /* Center the form on the page */
-  margin: 0 auto;
-  width: 400px;
-  /* Form outline */
-  padding: 1em;
-  border: 1px solid #CCC;
-  border-radius: 1em;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-form li + li {
-  margin-top: 1em;
-}
-
-label {
-  /* Uniform size & alignment */
-  display: inline-block;
-  width: 90px;
-  text-align: right;
-}
-
-input, 
-textarea {
-  /* To make sure that all text fields have the same font settings
-     By default, textareas have a monospace font */
-  font: 1em sans-serif;
-
-  /* Uniform text field size */
-  width: 300px;
+    
+ /* Form formatting */
+	input[type=text], select {
+  width: 100%;
+  padding:0.05%;
+    margin-bottom: 0.5%;
+    font-size: 50%;
+  display: block;
+  border: 2px solid steelblue;
+  border-radius: 4px;
   box-sizing: border-box;
 
-  /* Match form field borders */
-  border: 1px solid #999;
+}
+    
+	input[type="checkbox"]  {
+  margin: 0 8px 5px 18px;
+  font-size: 50%;
+}
+	
+	
+    
+    input[type="radio"]  {
+  margin: 0 8px 5px 18px;
+  font-size: 50%;
+}
+    
+    input[type="radio"]: first-child {
+  margin-left:0;
+}
+    
+
+input[type="submit"] {
+  width: 100%;
+    height: 200%;
+  background-color: #4CAF50;
+  color: #F9CB9C;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-input:focus, 
-textarea:focus {
-  /* Additional highlight for focused elements */
-  border-color: #000;
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+    
+    input:focus {
+    background: white;}
+    
+    input[type="radio"]:checked + label {
+    font-weight: bold;
+    font-size: 150%;}
+
+form {
+    text-align: left;
+  border-radius: 5px;
+  padding: 2%;
+    margin: 2% auto;
+    color: steelblue;
+    width: 250px; 
 }
 
-textarea {
-  /* Align multiline text fields with their labels */
-  vertical-align: top;
-
-  /* Provide space to type some text */
-  height: 5em;
+	#sendBtn{
+		border:none;
+		background:steelblue;
+		padding:.7rem;
+		font-family: 'Arial';
+		font-size: 70%;
+		color:white;
+		margin:1rem 0;
+		width:100%;
+		height: 200%;
+		text-transform:uppercase;
+		cursor:pointer;
+		transition:.3s background ease;
+	
 }
-
-.button {
-  /* Align buttons with the text fields */
-  padding-left: 90px; /* same size as the label elements */
+	
+    #sendBtn:focus{
+    background:#CFE2F3;
+    border: solid steelblue;}
+	
+	.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
-
-button {
-  /* This extra margin represent roughly the same space as the space
-     between the labels and their text fields */
-  margin-left: .5em;
-}
-  </style>
+	
+  
+	</style>
   </head>
   <body>
 
 
 
+	<a name="home"></a>
+   <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Header.png?raw=true" style="width:70%; height: 70%; border:none;">
+    <h1>You're invited to our Wedding Celebration on <b>21st February 2021</b>
+    </h1>
+	
+	
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture1.png?raw=true" style="width:100%; height: 100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/SGP04951-0105.jpg?raw=true" style="width:100%; height: 100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/SGP04951-0171.jpg?raw=true" style="width:100%; height: 100%">
+</div>
 
 
-  <div class="bg-img">
-    <div class="container">
-     
-          <div class="center" style="color: #fefefe; font-size: 100%;">Tying the knot February 21, 2021</div><br><br>
-      <div class="topnav">
-        <a href="#home"><b>Our Story</a>
-        <a href="#news">Ceremony</a>
-        <a href="#contact">Directions</a>
-        <a href="#about">RSVP</a>
-          <a href="#about">Schedule</b></a>
-      </div>
-       <div class="centered" style="color: #F4F6F7; font-size: 400%; padding: 40px"><b><br><br><br><i>We're getting married! </i></b></div>
-	  <p style="font-size: 300%; color:#E57373;" class="groove" id="demo"></p>
-
-    </div>
-  </div><br>&nbsp
-
-  <story>
-    <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture2.png?raw=true" style = "width: 500px; border-radius: 50%; opacity: 0.8;" class="image-style"> 
-    <h2 align="center" class="w3-container w3-lobster"  style="font-size: 300%; color:#424242">
-      Our Story
-      </h2>
-
-      <center>
-   adfsngjvntibmlmbuttagjrignargnakfnkamf<br>&nbsp
-    </center>
-  </story>
-
-
-    <div class="storybckgrd">
-    <ceremony><br><br>
-      <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture3.png?raw=true" style = "width: 500px; opacity: 0.9; border-radius: 50%; " class="image-style">
-      <h2 align="center" class="w3-container w3-lobster"  style="font-size: 300%; color:#424242">
-      Ceremony
-      </h2>
-        <center style="font-family: Times New Roman", Times, serif;">
-      February 21, 2021 <br> 6:30pm - 10:30pm <br> Hotel Fort Canning <br> Grand Marquee Ballroom</center>
-    </ceremony><br></div>
-  &nbsp    
-
-  <directions>
-    <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture4.png?raw=true" style = "width: 500px; border-radius: 50%; opacity: 0.9;" class="image-style">
-    <h2 align="center" class="w3-container w3-lobster"  style="font-size: 300%; color:#424242;">
-      Directions
-      </h2><center style="font-family: Times New Roman", Times, serif;">Hotel Fort Canning <br>11 Canning Walk<br> Singapore 178881 <br><br><img src="https://im.gifbt.com/map/venue/10592.png?v=1"><br><br> <b>By MRT:</b><br>(DT20) Fort Canning Station: Take Exit B<br> (NS24/NE6/CC1) Dhoby Ghaut Station: Take Exit B<br><br>
-    <b>By Car:</b><br>There are parking slots available in Hotel Fort Canning.
-  </center>
-    </directions><br>
-    &nbsp
-      
-<div class="storybckgrd">
-  <rsvp>
-     <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture5.png?raw=true" style = "width: 500px; border-radius: 50%; opacity: 0.9;" class="image-style">
-     <h2 align="center" class="w3-container w3-lobster"  style="font-size: 300%; color:#424242;">
-      RSVP
-      </h2>
-    <form name="submit-to-google-sheet">
-  <input name="email" type="email" placeholder="Email" required>
-  <button type="submit" onclick="window.location.reload();">Send</button>
-</form>
 
 <script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwxw6dahbCBsB0z7mRS5N8P7xmRIyItreYiopZyrhSKpeVRmguD/exec'
-  const form = document.forms['submit-to-google-sheet']
+var slideIndex = 0;
+carousel();
 
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => console.log('Success!', response))
-      .catch(error => console.error('Error!', error.message))
-  })
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
 </script>
+<br>
+ <div class="story">
+   <a name="story"></a>
+   <h1 align="center" style="font-size: 120%;">
+      Our Story </h1>
+    <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture2.png?raw=true" style = "width: 400px; border-radius: 50%; opacity: 0.9;" > 
+  <p style="font-size: 50%;">
+    jasgfndslnlsdhkgl
+   </p> 
+    </div>    </div>
+    <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/sectionend.png?raw=true" style="border:none; width: 300px; height: 100px;">
 
+     <div class="ceremony">
+         <a name="ceremony"></a>
+        <h1 align="center" style="font-size: 120%;">
+      Ceremony </h1>
+       <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture3.png?raw=true" style = "width: 400px; opacity: 0.9; border-radius: 50%; ">
+    </div><center style="font-family: Sofia; font-size: 100%"><br>
+      21st February, 2021 <br> 6:30pm - 10:30pm <br> Hotel Fort Canning <br> Grand Marquee Ballroom</center>
+    
+    <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/sectionend.png?raw=true" style="border:none; width: 300px;height: 100px;">
+
+    <div class="storybckgrd">
+      <div class="direction">
+        <a name="direction"></a>
+        <h1 align="center" style="font-size: 120%;">
+      Directions </h1>
+        <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture4.png?raw=true" style = "width: 400px; border-radius: 50%; opacity: 0.9;" >
+        <center style="font-family: Sofia; font-size:50%"><br>Hotel Fort Canning <br>11 Canning Walk<br> Singapore 178881 <br><br><img src="https://im.gifbt.com/map/venue/10592.png?v=1" style="width: 400px;"><br><br> <b>By MRT:</b><br>(DT20) Fort Canning Station: Take Exit B<br> (NS24/NE6/CC1) Dhoby Ghaut Station: Take Exit B<br><br>
+    <b>By Car:</b><br>There are parking slots available in Hotel Fort Canning.
+  </center>
+      </div>
+    </div>
+	
+    <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/sectionend.png?raw=true" style="border:none; width: 300px;height: 100px;">
+
+    <div class="rsvp">
+        <a name="rsvp"></a>
+        <h1 align="center" style="font-size: 120%;">
+      RSVP </h1>
+      <img src="https://github.com/yuyangselina/yuyangselina.github.io/blob/master/Picture5.png?raw=true" style = "width: 400px; border-radius: 50%; opacity: 0.9;" ><br>
+         
+		<form action="https://docs.google.com/forms/d/e/1FAIpQLSeiMvyJwVt-GyzQ-XsKLG3_84wI-agJEcAMAVNBI6UtWvv_Bg/viewform?usp=sf_link" > 
+	<button type="submit" id="sendBtn">RSVP here</button>
+	</form>
 
     </rsvp>
       </div>
   </body>
+  </html>
+
+
+    
+      </div>
+	  
+	  
+  </body>
+  <ul class="nav">
+  <li><a href="#home"><b>Home</b></a></li>
+  <li><a href="#story"><b>Story</b></a></li>
+  <li><a href="#ceremony"><b>Ceremony</b></a></li>
+  <li><a href="#direction"><b>Directions</b></a></li>
+  <li><a href="#rsvp"><b>RSVP</b></a></li>
+</ul>
   </html>
